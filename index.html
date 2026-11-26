@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chaitra Shetty | Technical &amp; AI Product Manager</title>
+<meta name="description" content="Portfolio of Chaitra Shetty: Technical, Platform and AI Product Manager. Live AI product prototypes with PRDs.">
+<style>
+:root{
+  --navy:#0F2A44; --navy2:#17395C; --blue:#1F5FAF; --ink:#1F2937; --muted:#5B6675;
+  --line:#E3E8EF; --bg:#F7F9FC; --card:#FFFFFF; --ok:#067647; --okbg:#E7F6EE;
+  --warn:#8A5A00; --warnbg:#FFF4DB;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:56px 0}
+h2{font-size:26px;margin:0 0 6px;color:var(--navy);letter-spacing:-.01em}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.lead{color:var(--muted);margin:0 0 28px;max-width:720px}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:64px 0 56px}
+.hero h1{font-size:44px;line-height:1.1;margin:0 0 8px;letter-spacing:-.02em}
+.hero .role{font-size:18px;color:#BFD7F2;margin:0 0 18px;font-weight:500}
+.hero p.sum{max-width:760px;color:#E4EDF8;margin:0 0 26px;font-size:17px}
+.contact{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;font-weight:600;font-size:14px;border:1px solid transparent}
+.btn-primary{background:#fff;color:var(--navy)}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.btn:hover{text-decoration:none;opacity:.9}
+.meta{margin-top:18px;font-size:14px;color:#BFD7F2}
+
+/* METRICS */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-28px;position:relative}
+.metric{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px;box-shadow:0 4px 16px rgba(15,42,68,.06)}
+.metric b{display:block;font-size:26px;color:var(--navy);line-height:1.1}
+.metric span{font-size:13px;color:var(--muted)}
+
+/* PROJECTS */
+.projects{display:grid;gap:22px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 28px}
+.proj-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.proj h3{margin:0;font-size:22px;color:var(--navy)}
+.proj .tagline{color:var(--muted);margin:2px 0 0;font-size:15px}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--okbg);color:var(--ok);white-space:nowrap}
+.badge.draft{background:var(--warnbg);color:var(--warn)}
+.proj-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;margin-top:16px}
+.label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin:0 0 6px}
+.proj p{margin:0 0 10px}
+.proj ul{margin:0 0 6px;padding-left:18px}
+.proj li{margin:4px 0}
+.box{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.box.gap{background:var(--warnbg);border-color:#F3DFA8}
+.tools{font-size:13px;color:var(--muted);margin-top:12px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.links a{font-size:14px;font-weight:600;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--navy)}
+.links a.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.links a:hover{text-decoration:none;border-color:var(--blue)}
+.note{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* EXPERIENCE */
+.role-block{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:16px}
+.role-block h3{margin:0;font-size:18px;color:var(--navy)}
+.role-block .org{color:var(--blue);font-weight:600;margin:2px 0 10px}
+.role-block .when{color:var(--muted);font-size:14px;float:right}
+.role-block ul{margin:0;padding-left:18px}
+.role-block li{margin:6px 0}
+
+/* SKILLS */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.skill h4{margin:0 0 8px;color:var(--navy);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--ink)}
+
+/* CERTS */
+.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 24px;margin:0;padding:0;list-style:none}
+.certs li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+
+/* CONTACT */
+.cta{background:var(--navy);color:#fff;border-radius:16px;padding:36px 32px;text-align:center}
+.cta h2{color:#fff}
+.cta p{color:#D6E4F5;max-width:640px;margin:0 auto 20px}
+.cta .btn-primary{background:#fff;color:var(--navy)}
+footer{padding:26px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+
+@media (max-width:860px){
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .proj-grid{grid-template-columns:1fr}
+  .skills,.certs{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+  .role-block .when{float:none;display:block;margin-bottom:4px}
+}
+
+.open{margin:-8px 0 22px;font-weight:600;color:#fff;background:rgba(255,255,255,.12);display:inline-block;padding:6px 12px;border-radius:8px;font-size:14px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 4px}
+.shots.one{grid-template-columns:1fr}
+.shots figure{margin:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#F3F6FA}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{font-size:12px;color:var(--muted);padding:6px 10px;background:#fff;border-top:1px solid var(--line)}
+.case{margin:16px 0 4px;border:1px solid #CFE0F5;background:#F5F9FF;border-radius:10px;padding:16px 18px}
+.case .label{margin-bottom:4px}
+.case ul{margin:0 0 8px;padding-left:18px}
+.case p{margin:0}
+@media (max-width:860px){.shots{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Chaitra Shetty</h1>
+    <p class="role">Technical &amp; AI Product Manager · Platform Product Manager</p>
+    <p class="sum">Cloud and platform leader in enterprise delivery, now moving into product. I turn operational problems into clear requirements and test my ideas with working AI prototypes.</p>
+    <div class="contact">
+      <a class="btn btn-primary" href="docs/Chaitra-Shetty-CV.pdf">Download CV (PDF)</a>
+      <a class="btn btn-ghost" href="mailto:chaitrashetty10@gmail.com">chaitrashetty10@gmail.com</a>
+      <a class="btn btn-ghost" href="https://linkedin.com/in/chaitra-shetty972020" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="meta">+91 9867139540 · Bangalore, India</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="metrics">
+    <div class="metric"><b>3 clouds</b><span>AWS, Azure and GCP enterprise platforms</span></div>
+    <div class="metric"><b>600+</b><span>Global enterprise clients supported</span></div>
+    <div class="metric"><b>85%</b><span>Task handling efficiency gain (40 to 6 mins)</span></div>
+    <div class="metric"><b>4</b><span>Hands-on GenAI product prototypes, each with a PRD</span></div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="kicker">Selected work</div>
+    <h2>AI product prototypes</h2>
+    <p class="lead">Each project starts with a PRD: the problem, the user, the scope and what is deliberately left out. Each one has a live link and downloadable documents. Next steps are listed for each.</p>
+
+    <div class="projects">
+
+      <!-- 1. EvalForge AI -->
+      <article class="proj">
+        <div class="proj-head">
+          <div>
+            <h3>EvalForge AI</h3>
+            <p class="tagline">Unified model and AI agent evaluation platform</p>
+          </div>
+          <span class="badge">Live prototype</span>
+        </div>
+<div class="shots"><figure><img src="images/evalforge-overview.jpg" alt="EvalForge AI overview dashboard" loading="lazy"><figcaption>Overview: scores, safety and cost at a glance</figcaption></figure><figure><img src="images/evalforge-agent-comparison.jpg" alt="EvalForge AI agent comparison" loading="lazy"><figcaption>Agent comparison: weighted scores and safety verdict</figcaption></figure></div>
+        <div class="proj-grid">
+          <div>
+            <p class="label">The problem</p>
+            <p>Teams choose AI models from demos and single benchmark scores. AI agents are judged only by their final reply, which hides wrong tool calls and skipped approvals.</p>
+            <p class="label">What I did</p>
+            <ul>
+              <li>Defined the product vision and a scoped MVP PRD (v0.2) with goals, non-goals, release criteria and risks.</li>
+              <li>Designed weighted scoring across nine LLM dimensions, with N/A handling and a safety gate that excludes unsafe candidates.</li>
+              <li>Specified confidence intervals so that close results are reported as &ldquo;not clear enough&rdquo; rather than declaring a false winner.</li>
+              <li>Designed model and agent comparison, execution traces, and a model selection advisor.</li>
+              <li>Required every result to carry an evidence label: LIVE, LOCAL, SIMULATED or DETERMINISTIC.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="box" style="background:#F5F8FD">
+              <p class="label" style="color:var(--warn)">What's next</p>
+              <ul>
+                <li>Make the evidence labels impossible to misread: simulated results never appear as deployable.</li>
+                <li>Replace the rule-based demo judge with a real LLM judge, checked against human ratings.</li>
+                <li>Align figures across the dashboard, comparison and advisor pages.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="case">
+          <p class="label">Case study: key decisions and outcome</p>
+          <ul>
+            <li><b>Decision:</b> report close results as &ldquo;not clear enough&rdquo; using confidence intervals, rather than naming a winner from a small gap.</li>
+            <li><b>Decision:</b> let the safety gate override the total score, so an unsafe model cannot win on speed or cost.</li>
+            <li><b>Decision:</b> cut multi-agent, RAG and benchmark claims from version 1 to keep the MVP honest and free to run.</li>
+          </ul>
+          <p><b>Outcome:</b> a working comparison, trace and advisor prototype. A structured review of the live app logged 13 issues, each with a planned fix in the PRD.</p>
+        </div>
+        <p class="tools"><b>Tools:</b> Google AI Studio, Claude, GitHub, Vercel</p>
+        <div class="links">
+          <a class="primary" href="https://evalforgeai.vercel.app/" target="_blank" rel="noopener">Live app ↗</a>
+          <a href="docs/EvalForge-AI-PRD.pdf" target="_blank" rel="noopener">PRD (PDF)</a>
+          <a href="https://github.com/chaitrashetty10/EvalForgeAI" target="_blank" rel="noopener">Source code ↗</a>
+        </div>
+      </article>
+
+      <!-- 2. Synapse -->
+      <article class="proj">
+        <div class="proj-head">
+          <div>
+            <h3>Synapse</h3>
+            <p class="tagline">Decision-to-execution copilot for teams</p>
+          </div>
+          <span class="badge draft">Prototype · PRD draft</span>
+        </div>
+<div class="shots one"><figure><img src="images/synapse-flow.jpg" alt="Synapse end-to-end flow diagram" loading="lazy"><figcaption>Synapse end-to-end flow, from meeting to closed decision</figcaption></figure></div>
+        <div class="proj-grid">
+          <div>
+            <p class="label">The problem</p>
+            <p>Decisions made in meetings often never become tracked work. Nothing links a task back to the decision or meeting that created it, so teams re-discuss settled items and miss deadlines.</p>
+            <p class="label">What I did</p>
+            <ul>
+              <li>Wrote the PRD (v1.0): objectives, target users, problem statement, solution options and functional requirements FR1 to FR14.</li>
+              <li>Designed a human-in-the-loop flow: AI extracts decisions, owners and deadlines, and a person approves, edits or rejects before any task is created.</li>
+              <li>Designed risk and conflict detection, with the earlier decision shown and the call left to people.</li>
+              <li>Designed Decision Memory and Ask Copilot, which answers only from stored decisions, tasks and outcomes.</li>
+              <li>Defined success metrics with starting targets, such as +90% decision-to-task rate and −20% repeat discussions.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="box">
+              <p class="label">Honest status</p>
+              <p style="margin:0">The PRD is based on the prototype and its planned flow. The problem list still needs 5 to 8 user interviews and a short survey before scope and targets are locked.</p>
+            </div>
+          </div>
+        </div>
+        <p class="tools"><b>Tools:</b> Claude, Google AI Studio, Lovable, Supabase</p>
+        <div class="links">
+          <a class="primary" href="https://decision-to-execution-copilot.ai.studio/" target="_blank" rel="noopener">Live prototype ↗</a>
+          <a href="docs/Synapse-PRD.pdf" target="_blank" rel="noopener">PRD (PDF)</a>
+        </div>
+      </article>
+
+      <!-- 3. CloudOps Knowledge Co-Pilot -->
+      <article class="proj">
+        <div class="proj-head">
+          <div>
+            <h3>CloudOps Knowledge Co-Pilot</h3>
+            <p class="tagline">RAG assistant that answers from our own runbooks, with sources, or says &ldquo;I don&rsquo;t know&rdquo;</p>
+          </div>
+          <span class="badge">Live prototype</span>
+        </div>
+<div class="shots"><figure><img src="images/cloudops-ebs-answer.jpg" alt="CloudOps answer with step sources" loading="lazy"><figcaption>High-confidence answer with a source on every step</figcaption></figure><figure><img src="images/cloudops-refusal.jpg" alt="CloudOps refusal of an unsafe request" loading="lazy"><figcaption>Refusal of a prompt-injection attempt, with a named contact</figcaption></figure></div>
+        <div class="proj-grid">
+          <div>
+            <p class="label">The problem</p>
+            <p>On-call engineers lose 10 to 20 minutes during incidents searching Confluence, Slack and wikis for the right runbook. The goal is under one minute, with no guessing.</p>
+            <p class="label">What I did</p>
+            <ul>
+              <li>Wrote PRD v1.2, covering the persona, use cases, refusals and the RAG architecture, and compared alternatives (prompting, fine-tuning, keyword search).</li>
+              <li>Designed permission filtering before search, an answer check that removes unsourced sentences, and an audit log.</li>
+              <li>Defined a 150-question golden test set and launch gates: recall@5 85% or more, faithfulness 95% or more, refusal precision 90% or more.</li>
+              <li>Ran three prototype test rounds, which led to a fixed answer format, confidence badges and explicit refusals.</li>
+              <li>Modelled cost at about $70 to $100 per month for a 24-person pilot.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="box" style="background:#F5F8FD">
+              <p class="label" style="color:var(--warn)">What's next (v2)</p>
+              <ul>
+                <li>Cap confidence at Medium when the main source is older than 180 days, and show the staleness warning once.</li>
+                <li>Scale the knowledge base from a handful of documents to the planned ~400 pages.</li>
+                <li>Test permission filtering, weekly re-indexing and follow-up questions before pilot.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="case">
+          <p class="label">Case study: key decisions and outcome</p>
+          <ul>
+            <li><b>Decision:</b> RAG over fine-tuning, because runbooks change weekly and every answer must point to its source.</li>
+            <li><b>Decision:</b> say &ldquo;I don&rsquo;t know&rdquo; when the best match is under 0.5, rather than guess an incident fix.</li>
+            <li><b>Decision:</b> apply permission filters before search, so restricted documents never reach the model.</li>
+          </ul>
+          <p><b>Outcome:</b> three prototype test rounds. Prompt-injection attempts were refused, unknown answers were flagged with a named contact, and conflicting sources were shown side by side. Open items: an old source still showed High confidence (fix planned), and the 150-question golden set is defined but its recall and faithfulness scores are not yet reported.</p>
+        </div>
+        <p class="tools"><b>Tools:</b> Claude, Google AI Studio, ChromaDB, Vercel</p>
+        <div class="links">
+          <a class="primary" href="https://datavora-5268.ai.studio/" target="_blank" rel="noopener">Live prototype ↗</a>
+          <a href="docs/CloudOps-Knowledge-Copilot-PRD.pdf" target="_blank" rel="noopener">PRD v1.2 (PDF)</a>
+        </div>
+      </article>
+
+      <!-- 4. PM Time Machine -->
+      <article class="proj">
+        <div class="proj-head">
+          <div>
+            <h3>PM Time Machine</h3>
+            <p class="tagline">Interactive product management decision simulator (Buildathon project)</p>
+          </div>
+          <span class="badge">Live app</span>
+        </div>
+<div class="shots one"><figure><img src="images/pm-time-machine-demo.jpg" alt="PM Time Machine launch crisis scenario" loading="lazy"><figcaption>Launch-crisis scenario: three options, each with consequences</figcaption></figure></div>
+        <div class="proj-grid">
+          <div>
+            <p class="label">The problem</p>
+            <p>Aspiring PMs read about decisions and watch mock interviews, but rarely practise trade-offs under pressure. In our survey, 4 of 6 said they had never practised a trade-off hands-on.</p>
+            <p class="label">What I did</p>
+            <ul>
+              <li>Defined the target persona, MVP scope, interactive scoring model and the AARRR growth strategy.</li>
+              <li>Built a launch-crisis scenario where each choice (ship everything, cut the feature, or delay) changes the metrics.</li>
+              <li>Ran early usability testing with 5 users: all 5 said the scenario was clear and that they learned about trade-offs, and all 5 wanted to replay.</li>
+              <li>Set an activation target of finishing a first case study in about 3 minutes.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="box">
+              <p class="label">Early result (n = 5)</p>
+              <p style="margin:0">2 users reached their first decision in under a minute and 3 within 1 to 3 minutes. The sample is small, so these are early signals, not proof.</p>
+            </div>
+          </div>
+        </div>
+        <p class="tools"><b>Tools:</b> Claude API, GitHub, Vercel</p>
+        <div class="links">
+          <a class="primary" href="https://pm-time-machine.vercel.app" target="_blank" rel="noopener">Live app ↗</a>
+          <a href="https://github.com/chaitrashetty10/pm-time-machine" target="_blank" rel="noopener">Source code ↗</a>
+          <a href="docs/PM-Time-Machine-Overview.pdf" target="_blank" rel="noopener">Project overview (PDF)</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">Career</div>
+    <h2>Experience</h2>
+    <p class="lead">Cloud, data and platform delivery for enterprise clients, now applied to product management.</p>
+
+    <div class="role-block">
+      <span class="when">Jan 2015 – Present</span>
+      <h3>Senior cloud operations Specialist</h3>
+      <div class="org">Teradata India Pvt Ltd</div>
+      <ul>
+        <li>Partnered with service managers and global clients to turn operational problems into prioritised technical requirements across 600+ enterprise cloud deployments.</li>
+        <li>Redesigned database allocation requests with standard workflows, self-service documentation and proactive monitoring: recurring requests down 30%, escalations down 40%, task handling time from 40 to 6 minutes (85% efficiency gain).</li>
+        <li>Led an 8-member engineering delivery team, aligning SRE, engineering and customer success to meet SLAs for UK and European client portfolios.</li>
+        <li>Acted as product owner for platform query efficiency, diagnosing latency with SQL execution plans and automating storage capacity allocation.</li>
+      </ul>
+    </div>
+
+    <div class="role-block">
+      <span class="when">Jan 2008 – Jan 2015</span>
+      <h3>SQL Database Administrator &amp; Platform Specialist</h3>
+      <div class="org">Atos India Pvt Ltd</div>
+      <ul>
+        <li>Maintained a 99.9% uptime SLA for mission-critical enterprise applications across UK and European clients.</li>
+        <li>Led the onshore-to-offshore migration of an £8.1M UK enterprise programme with zero service disruption.</li>
+        <li>Translated technical metrics into executive dashboards to align delivery with client business goals.</li>
+      </ul>
+    </div>
+
+    <div class="role-block">
+      <h3>Key accomplishments</h3>
+      <ul>
+        <li>Managed L3 platform delivery for an £85M global enterprise programme serving around 5.9M customer accounts across 14,700 employees.</li>
+        <li>Recognised with 2× SPOT Award, 2× Certificate of Excellence and the Elevate Award for cross-functional delivery and customer satisfaction.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="kicker">Capabilities</div>
+    <h2>Skills</h2>
+    <p class="lead">Product skills backed by hands-on cloud and AI delivery.</p>
+    <div class="skills">
+      <div class="skill">
+        <h4>Product management</h4>
+        <div class="chips">
+          <span class="chip">Product discovery</span><span class="chip">PRD development</span><span class="chip">MVP scoping</span>
+          <span class="chip">Roadmap prioritisation</span><span class="chip">User journey mapping</span><span class="chip">AARRR growth</span>
+          <span class="chip">SLA and KPI tracking</span>
+        </div>
+      </div>
+      <div class="skill">
+        <h4>AI and generative AI</h4>
+        <div class="chips">
+          <span class="chip">LLM benchmarking</span><span class="chip">RAG architecture</span><span class="chip">AI agents</span>
+          <span class="chip">Prompt engineering</span><span class="chip">LLM-as-a-judge</span><span class="chip">Evaluation rubrics</span>
+          <span class="chip">Guardrails</span><span class="chip">Human-in-the-loop</span><span class="chip">Cost-latency-quality trade-offs</span>
+        </div>
+      </div>
+      <div class="skill">
+        <h4>Platform and cloud</h4>
+        <div class="chips">
+          <span class="chip">AWS</span><span class="chip">Microsoft Azure</span><span class="chip">GCP</span>
+          <span class="chip">Teradata</span><span class="chip">SQL Server tuning</span><span class="chip">API integrations</span>
+          <span class="chip">Cloud architecture</span>
+        </div>
+      </div>
+      <div class="skill">
+        <h4>Leadership and delivery</h4>
+        <div class="chips">
+          <span class="chip">Cross-functional alignment</span><span class="chip">Stakeholder management</span><span class="chip">SAFe / Scrum</span>
+          <span class="chip">Change management</span><span class="chip">Jira</span><span class="chip">Confluence</span><span class="chip">ServiceNow</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS & EDUCATION -->
+<section id="credentials" style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">Credentials</div>
+    <h2>Certifications &amp; education</h2>
+    <ul class="certs" style="margin-top:18px">
+      <li>AWS Certified AI Practitioner</li>
+      <li>AWS Certified Solutions Architect – Associate</li>
+      <li>Certified SAFe 5 Agilist</li>
+      <li>Certified Scrum Master (CSM)</li>
+      <li>Microsoft Azure Certified</li>
+      <li>Teradata Certified Professional</li>
+      <li>GNIIT in Information Technology, NIIT (2008)</li>
+      <li>Bachelor of Commerce (B.Com), Mumbai University (2008)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Let&rsquo;s talk about your product</h2>
+      <p>Open to Technical Product Manager, Platform Product Manager and AI Product Manager roles in enterprise SaaS and cloud. I am happy to walk through any PRD or demo.</p>
+      <div class="contact" style="justify-content:center">
+        <a class="btn btn-primary" href="mailto:chaitrashetty10@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/chaitra-shetty972020" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="docs/Chaitra-Shetty-CV.pdf">Resume (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© Chaitra Shetty · Bangalore, India · Portfolio last updated November 2026</div>
+</footer>
+
+</body>
+</html>
